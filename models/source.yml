@@ -1,11 +1,10 @@
 sources:
   - name: jaffle_shop
     database: raw
-    schema: jaffle_shop
+    schema: jaffle_Shop
     tables:
       - name: customers
-
-      - name: orders
+      - name: orders 
         config:
           freshness:
             warn_after:
