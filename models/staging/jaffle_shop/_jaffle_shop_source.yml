@@ -1,0 +1,13 @@
+sources:
+  - name: jaffle_shop
+    database: raw  
+    schema: jaffle_shop  
+    tables:
+      - name: orders
+        config:
+          freshness: # make this a little more strict
+            warn_after: {count: 6, period: day}
+      - name: customers
+        config:
+          freshness: # make this a little more strict
+            warn_after: {count: 6, period: day}
