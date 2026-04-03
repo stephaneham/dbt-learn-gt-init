@@ -1,3 +1,11 @@
+{{
+    config(
+        materialized='table',
+        tags="nightly"
+
+    )
+}}
+
 with customers as (
 
     select
