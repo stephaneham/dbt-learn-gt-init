@@ -1,0 +1,27 @@
+models:
+  - name: stg_jaffle_shop_customers
+    description: description
+    columns:
+    - name: customer_id
+    data_tests:
+      - unique
+      - not_null  
+  - name: stg_jaffle_shop__jaffle_shop_orders
+    description: description
+    columns:
+    - name: order_id
+      data_tests:
+        - unique
+        - not_null
+    - name: status
+      data_tests:
+        - accepted_values:
+          arguments: # available in v1.10.5 and higher. Older versions can set the <argument_name> as the top-level property.
+            # values: ['placed', 'shipped', 'completed', 'returned']
+            values:
+              - placed
+              - shipped
+              - delivered
+              - returned
+              - completed
+              - return_pending
