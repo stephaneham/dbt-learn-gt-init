@@ -1,3 +1,10 @@
+{{
+    config(
+        materialized='table',
+        tags= ['customers']
+    )
+}}
+
 with customers as (
 
     select
