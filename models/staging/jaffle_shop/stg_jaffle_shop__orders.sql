@@ -1,3 +1,9 @@
+{{
+    config(
+        tags='hourly'
+    )
+}}
+
 with 
 
 source as (
